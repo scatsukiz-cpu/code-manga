@@ -108,6 +108,11 @@ def build(project, panel, aspect, style_extra=""):
         parts.append(pr.get("desc", pid))
         _add_ref(project, refs, pr.get("ref"))
 
+    b = panel.get("break_out")
+    if b:
+        sides = (b.get("sides") if isinstance(b, dict) else None) or ["top"]
+        parts.append(f"the main character is large and reaches the {' and '.join(sides)} edge of the image, "
+                     "clear silhouette separated from the background")
     if panel.get("prompt"):
         parts.append(panel["prompt"])
     # 台本の必須条件を作画指示に必ず転記する（改善案5）

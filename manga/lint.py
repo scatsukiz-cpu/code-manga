@@ -62,6 +62,25 @@ def lint_name(project, ep, name) -> Report:
             if len(shot_run) == 3:
                 rep.warn(where, f"同じ構図（{shot}/{key[1]}）が3コマ続いています: {', '.join(shot_run)}")
 
+            # コマの形と枠
+            frame = panel.get("frame", "full")
+            if frame not in ("full", "none", "fade"):
+                rep.error(where, f"frame が不明です: {frame}（full / none / fade）")
+            for o in panel.get("open") or []:
+                edge = o if isinstance(o, str) else o.get("edge")
+                if edge not in layouts.EDGES:
+                    rep.error(where, f"open の辺が不明です: {edge}（top / right / bottom / left）")
+            b = panel.get("break_out")
+            if isinstance(b, dict):
+                for side in b.get("sides") or []:
+                    if side not in layouts.EDGES:
+                        rep.error(where, f"break_out の向きが不明です: {side}")
+            if b and not panel.get("characters"):
+                rep.warn(where, "break_out（枠破り）ですが、人物がいません")
+            for k in (panel.get("shape") or {}):
+                if k not in layouts.EDGES:
+                    rep.error(where, f"shape の辺が不明です: {k}")
+
             # 案4：場所
             loc = panel.get("location")
             if not loc:

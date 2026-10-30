@@ -1,6 +1,8 @@
 # 第1話 ネーム
 # 各コマ：shot（long/full/middle/bust/up/detail）、angle（eye/high/low/back）、
 #         detail（main/normal/low）、deform、location、characters、props、must、text
+#         コマの形：frame（full/none/fade）、open（枠を開ける辺）、break_out（枠破り）、shape（辺の傾き）
+# ページ：col_tilt（縦の境目の傾き）、row_tilt（段の境目の傾き）
 episode: 1
 pages:
   - page: 1
@@ -35,6 +37,7 @@ pages:
         shot: bust
         deform: true
         hook: true
+        frame: fade            # 妄想なので枠なしでぼかす
         location: shoebox
         characters: [{id: hinata, costume: uniform, expression: "blushing, sparkling eyes, hands on cheeks", position: center}]
         text:
@@ -43,11 +46,14 @@ pages:
   - page: 2
     layout: "3b"
     scene: rooftop
+    col_tilt: 60               # 下段の縦の境目を斜めに
+    row_tilt: -50              # 上段と下段の境目を斜めに（左側が下がる）
     panels:
       - id: 1
         shot: full
         angle: low
         detail: main
+        break_out: {sides: [top], margin: 70}   # 陽向が枠の上を突き破る
         location: stairs
         characters: [{id: hinata, costume: uniform, pose: "kicking the rooftop door wide open with both arms, dramatic wind", position: center}]
         prompt: "dynamic action lines, exaggerated"
@@ -84,6 +90,8 @@ pages:
       - id: 2
         shot: full
         deform: true
+        frame: full
+        open: [top, {edge: right, from: 0.0, to: 0.5}]   # 崩れ落ちる勢いで枠の一部を壊す
         location: rooftop
         characters: [{id: hinata, costume: uniform, expression: "collapsed on the floor in despair, soul leaving her mouth", position: center}]
         text:

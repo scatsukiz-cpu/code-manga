@@ -84,10 +84,10 @@ def cmd_lint(proj, ep, args):
 def cmd_prompts(proj, ep, args):
     name = proj.load_name(ep)
     for page in _pages(name, args.pages):
-        rects = layouts.panel_rects(page["layout"])
-        for rect, panel in zip(rects, page["panels"]):
+        for shape, panel in zip(layouts.panel_shapes(page), page["panels"]):
             if args.panels and panel["id"] not in args.panels:
                 continue
+            rect = compose.image_box(shape, panel)
             prompt, negative, refs = prompts.build(proj, panel, rect.aspect)
             print(f"--- p{page['page']} k{panel['id']}  比率 {rect.aspect:.2f}")
             print(prompt)
@@ -106,15 +106,13 @@ def cmd_gen(proj, ep, args):
 
     todo = []
     for page in _pages(name, args.pages):
-        rects = layouts.panel_rects(page["layout"])
-        for rect, panel in zip(rects, page["panels"]):
+        for shape, panel in zip(layouts.panel_shapes(page), page["panels"]):
             if args.panels and panel["id"] not in args.panels:
                 continue
             path = proj.panel_path(ep, page["page"], panel["id"])
             if path.exists() and not args.force:
                 continue
-            r = layouts.bleed_rect(rect) if panel.get("bleed") else rect
-            todo.append((page, panel, r, path))
+            todo.append((page, panel, compose.image_box(shape, panel), path))
 
     print(f"生成するコマ: {len(todo)} 枚（担当: {backend_name}）")
     failed = 0

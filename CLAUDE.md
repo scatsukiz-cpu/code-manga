@@ -71,7 +71,15 @@ projects/<作品>/
   - `state` は「眼鏡なし」など。同じ `scene` の中で変わると lint が注意を出す。意図的なら `state_change: true`
 - `must`：台本で必須の絵の条件（例：唇の間に隙間）。英語で書く。チェックで必ず確認される
 - `prompt`：画像生成への追加指示（英語）。`action` は人間用のメモ（日本語）
-- `bleed: true`：タチキリ。`borderless: true`：枠線なし。`focus_point: [x, y]`：切り抜きの中心
+- `bleed: true`：タチキリ。`focus_point: [x, y]`：切り抜きの中心
+- コマの形と枠（長方形だけにしない。場面の勢いや心情に合わせて使う）
+  - `frame: full`（実線・既定）/ `none`（枠なし）/ `fade`（枠なしで周りをぼかす。回想・妄想・余韻に。`fade: 60` でぼかし幅）
+  - `open: [top, {edge: right, from: 0.0, to: 0.5}]`：枠の一部を描かない（壊れた枠）。辺は top / right / bottom / left、from/to は辺の上（左）からの割合
+  - `break_out: {sides: [top], margin: 80}`：枠破り。人物が指定した辺の外へはみ出す。前景の切り抜きに `pXX_kYY_mask.png`（白＝人物）か rembg（`pip install rembg`）が要る
+  - `shape: {top: 40, bottom: -30, left: 20, right: 20}`：このコマだけ辺を傾ける（px。top/bottom は右端の上下、left/right は下端の左右）
+- ページ単位の傾き（隣のコマも一緒に傾くので、間の幅は保たれる）
+  - `col_tilt: 60`：段の中の縦の境目を斜めにする。段ごとに変えるなら `[0, 60, -40]`
+  - `row_tilt: -50`：段と段の境目を斜めにする。正なら右が下がる。境目ごとなら `[30, 0]`
 - `hook: true`：関係性のフック。第1話は3ページ以内に必要
 - `text`：読む順に並べる
   - `{type: speech, speaker: id, to: 相手, text: "台詞"}`。`style: shout` でギザギザ
