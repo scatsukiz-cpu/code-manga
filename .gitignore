@@ -3,3 +3,7 @@ __pycache__/
 .env
 .venv/
 projects/*/out/
+series/hommono/chars/
+series/hommono/panels/
+series/hommono/out/
+__pycache__/

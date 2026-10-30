@@ -1,0 +1,36 @@
+EP = {"n": 6, "hook": "妹は、私の部屋のドアの隙間から笑っていた。", "pages": [
+ {"rows": [(0.45, 1), (1.2, 1), (1, 2)], "panels": [
+  {"reuse": "ep05:p4_2", "a": "tr", "fy": .3, "b": [{"t": "前回", "k": "black"}]},
+  {"p": "The elderly butler leading young Yui with her suitcase down a narrow dim back corridor of the mansion toward a small door.", "c": ["kasai", "yui19"], "a": "tr",
+   "b": [{"t": "こちらを……\nお使いください", "who": "l"}]},
+  {"p": "The butler bowing deeply, his eyes full of quiet apology and something knowing.", "c": ["kasai"], "a": "tl",
+   "b": [{"t": "申し訳\nございません", "who": "r"}]},
+  {"p": "Young Yui inside a tiny servant room with a narrow bed and a small window, smiling weakly and bravely.", "c": ["yui19"], "a": "tl",
+   "b": [{"t": "大丈夫です", "who": "r"}, {"t": "長野の家より、\nずっと広い\nですから"}]},
+ ]},
+ {"rows": [(1, 1), (1, 2), (1.1, 1)], "panels": [
+  {"p": "Reika in her luxurious princess-like bedroom sitting at a vanity mirror at night; her reflection smiles coldly.", "c": ["reika"], "a": "tl",
+   "b": [{"t": "本物？", "k": "black"}, {"t": "だから何？", "k": "black"}]},
+  {"p": "Close-up of Reika applying red lipstick, eyes cruel in the mirror.", "c": ["reika"], "a": "tl",
+   "b": [{"t": "二十年間、\nこの家の娘は\n私だった", "who": "r"}]},
+  {"p": "Reika's manicured hand slowly crushing a pink rose, petals falling.", "c": ["reika"], "a": "tr",
+   "b": [{"t": "田舎くさい女に、\n何ひとつ\n渡さない", "who": "l"}]},
+  {"p": "Reika's reflection in the mirror with a wide, beautiful, terrifying smile.", "c": ["reika"], "a": "tl",
+   "b": [{"t": "パパもママも\nお兄さまも――", "who": "r"}, {"t": "全部、\n私のもの"}]},
+ ]},
+ {"rows": [(1, 2), (1, 1), (1, 1)], "panels": [
+  {"p": "Reika turning away from the mirror, smile fading into coldness.", "c": ["reika"], "a": "tl",
+   "b": [{"t": "あの子の\n居場所なんて", "who": "r"}]},
+  {"p": "Extreme close-up of Reika's eyes, narrow and gleaming.", "c": ["reika"], "a": "tr",
+   "b": [{"t": "どこにも、\n作らせない", "who": "l"}]},
+  {"p": "Night. Young Yui sitting on the narrow bed in the dark servant room, holding the embroidered amulet pouch to her chest, moonlight from the small window.", "c": ["yui19"], "a": "tr",
+   "b": [{"t": "その夜――", "k": "box"}]},
+  {"p": "Young Yui doing delicate Japanese embroidery by the window light with a small hopeful smile.", "c": ["yui19"], "a": "tl",
+   "b": [{"t": "おばあちゃん、\n私、がんばるね", "k": "thought", "who": "r"}]},
+ ]},
+ {"rows": [(1, 1), (1.5, 1)], "strong": True, "panels": [
+  {"p": "View from a dark corridor: a door slightly ajar, and through the narrow gap a small lit room where a young woman with a low ponytail sits embroidering, unaware. Nobody else is visible in the corridor.", "a": "tl", "b": []},
+  {"p": "Large panel: extreme close-up of Reika's single eye and half smile in the narrow gap of a door in darkness, gleaming.", "c": ["reika"], "a": "tl",
+   "b": [{"t": "ようこそ、\nお姉さま", "k": "black"}, {"t": "地獄へ――", "k": "black"}]},
+ ]},
+]}
