@@ -1,0 +1,105 @@
+# 第1話 ネーム
+# 各コマ：shot（long/full/middle/bust/up/detail）、angle（eye/high/low/back）、
+#         detail（main/normal/low）、deform、location、characters、props、must、text
+episode: 1
+pages:
+  - page: 1
+    layout: "4"
+    scene: shoebox
+    panels:
+      - id: 1
+        shot: long
+        location: shoebox
+        detail: low
+        mobs: [{level: crowd, count: 3}]
+        characters: [{id: hinata, costume: uniform, position: center}]
+        action: 放課後の昇降口。陽向が自分の靴箱を開ける
+        text:
+          - {type: narration, text: "放課後。"}
+      - id: 2
+        shot: detail
+        location: shoebox
+        props: [letter]
+        action: 靴箱の中に白い封筒
+        must: ["the envelope has no sender name"]
+        text:
+          - {type: sfx, text: "ハッ"}
+      - id: 3
+        shot: up
+        location: shoebox
+        props: [letter]
+        characters: [{id: hinata, costume: uniform, expression: "shocked, holding a letter that says 'meet me on the roof'", position: center}]
+        text:
+          - {type: speech, speaker: hinata, text: "「屋上で待つ」……"}
+      - id: 4
+        shot: bust
+        deform: true
+        hook: true
+        location: shoebox
+        characters: [{id: hinata, costume: uniform, expression: "blushing, sparkling eyes, hands on cheeks", position: center}]
+        text:
+          - {type: thought, speaker: hinata, text: "これって……\n告白！？"}
+
+  - page: 2
+    layout: "3b"
+    scene: rooftop
+    panels:
+      - id: 1
+        shot: full
+        angle: low
+        detail: main
+        location: stairs
+        characters: [{id: hinata, costume: uniform, pose: "kicking the rooftop door wide open with both arms, dramatic wind", position: center}]
+        prompt: "dynamic action lines, exaggerated"
+        text:
+          - {type: speech, speaker: hinata, style: shout, text: "お待たせ\nしましたっ！！"}
+          - {type: sfx, text: "バーン", at: [0.18, 0.7]}
+      - id: 2
+        shot: middle
+        location: rooftop
+        characters: [{id: minato, costume: uniform, expression: "bored, leaning on the fence", position: center}]
+        text:
+          - {type: speech, speaker: minato, to: hinata, text: "……遅い"}
+      - id: 3
+        shot: bust
+        deform: true
+        location: rooftop
+        characters: [{id: hinata, costume: uniform, expression: "flustered, sweat drops", position: center}]
+        text:
+          - {type: speech, speaker: hinata, text: "み、湊！？\n手紙って"}
+
+  - page: 3
+    layout: "4"
+    scene: rooftop
+    panels:
+      - id: 1
+        shot: middle
+        location: rooftop
+        props: [notebook]
+        characters:
+          - {id: minato, costume: uniform, expression: "deadpan, holding out his hand", position: right}
+          - {id: hinata, costume: uniform, position: left, pose: "seen from behind"}
+        text:
+          - {type: speech, speaker: minato, to: hinata, text: "数学のノート\n貸して"}
+      - id: 2
+        shot: full
+        deform: true
+        location: rooftop
+        characters: [{id: hinata, costume: uniform, expression: "collapsed on the floor in despair, soul leaving her mouth", position: center}]
+        text:
+          - {type: sfx, text: "ガーン"}
+      - id: 3
+        shot: long
+        angle: back
+        location: rooftop
+        props: [notebook]
+        characters: [{id: minato, costume: uniform, pose: "walking away with the notebook", position: center}]
+        text:
+          - {type: speech, speaker: minato, to: hinata, text: "サンキュ"}
+      - id: 4
+        shot: up
+        detail: main
+        location: rooftop
+        characters: [{id: minato, costume: uniform, expression: "close-up of his ear turning bright red, face turned away", position: center}]
+        must: ["his ear is visibly blushing with dark screentone hatching"]
+        text: []

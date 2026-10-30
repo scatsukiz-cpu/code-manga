@@ -1,0 +1,24 @@
+# 作品の設定
+title: 見本：屋上の手紙
+genre: ラブコメ
+deform: true            # ギャグ・コメディなのでデフォルメを使う（改善案13）
+style: "Japanese shoujo-comedy manga, black and white, screentone shading, clean ink lines, expressive eyes"
+negative: "color, text, letters, speech bubble, watermark, signature, extra fingers, deformed hands"
+thought_style: box      # 心の声は四角枠（box）か、もこもこ（cloud）
+max_chars_per_page: 220
+max_chars_per_balloon: 45
+font_size: 30
+# font: /System/Library/Fonts/ヒラギノ角ゴシック W6.ttc   # Mac の例
+# font_bold: C:/Windows/Fonts/YuGothB.ttc                # Windows の例
+
+# 画像生成の担当：placeholder（ダミー）/ openai / xai / comfyui
+backend: placeholder
+backend_options:
+  openai:
+    model: gpt-image-1
+    quality: high
+  xai:
+    model: grok-2-image
+  comfyui:
+    server: http://127.0.0.1:8188
+    workflow: workflows/sdxl_api.json

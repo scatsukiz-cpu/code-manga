@@ -1,0 +1,31 @@
+# 設定資料。appearance / desc は画像生成に渡すので英語で書く。
+characters:
+  hinata:
+    name: 朝倉 陽向
+    appearance: "high school girl, short bob hair with a side clip, big bright eyes, energetic"
+    ref: refs/hinata.png
+    deform_ref: refs/hinata_chibi.png
+    costumes:
+      uniform: {desc: "sailor school uniform with a ribbon", ref: refs/hinata_uniform.png}
+  minato:
+    name: 久我 湊
+    appearance: "high school boy, messy black hair, sleepy half-closed eyes, tall and lanky"
+    ref: refs/minato.png
+    costumes:
+      uniform: {desc: "black gakuran school uniform, collar unbuttoned", ref: refs/minato_uniform.png}
+    speech_rules:
+      - to: hinata
+        forbid: ["お前", "うるせえ"]
+        note: "湊は陽向にぶっきらぼうだが乱暴な言葉は使わない"
+
+locations:
+  shoebox: {name: 昇降口, desc: "school entrance hall with rows of wooden shoe lockers, afternoon light", ref: refs/shoebox.png}
+  stairs: {name: 屋上への階段, desc: "narrow school stairwell leading up to a metal rooftop door", ref: refs/stairs.png}
+  rooftop: {name: 屋上, desc: "school rooftop with a chain-link fence, wide sky at sunset", ref: refs/rooftop.png}
+
+props:
+  letter: {name: 手紙, desc: "a plain white envelope with no sender name"}
+  notebook: {name: 数学のノート, desc: "a thin blue school notebook"}
+
+mobs:
+  crowd: {desc: "background students with very simple faces, minimal detail, small eyes, plain hairstyles"}
