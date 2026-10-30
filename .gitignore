@@ -7,3 +7,5 @@ series/hommono/chars/
 series/hommono/panels/
 series/hommono/out/
 __pycache__/
+series/hommono/video/*.mp4
+series/hommono/video/*.wav

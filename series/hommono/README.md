@@ -33,3 +33,15 @@ python3 finisher.py
 `restore.py` は JPEG から作業用の PNG（`chars/`、`panels/`、`out/`）を作り直す。
 `gen_many.py` は、すでにあるコマを飛ばして足りない分だけ生成する。
 `finisher.py` は、コマがそろった話から `out/epNN/` にページを書き出す。
+
+## 縦動画（モーションコミック）
+`video/motion.py` は、第1話のコマから縦動画（1080×1920、約47秒）を作る。
+コマを画面中央でゆっくりズーム・パンし、上下の帯にナレーションとセリフを縦書きで出す。音は風の音。
+
+```bash
+cd series/hommono
+python3 restore.py
+python3 video/motion.py
+```
+
+ほかの話を動画にするときは、`motion.py` の `P`（コマのフォルダ）と `CUTS`（カットの並び、秒数、ズーム、文字）を書き換える。
