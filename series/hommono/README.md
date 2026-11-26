@@ -20,13 +20,14 @@ OpenAI の画像生成（gpt-image-2）でコマを描き、`engine.py` でペ�
 - `assets/panels/ep01/`：第1話のコマ（縦動画の素材）
 
 ## 描き直すとき
-OpenAI のクレジットがある環境で、ネーム（`names/epNN.py`）を直し、該当話のコマを消してから実行する。
-コマの元絵はリポジトリに入れていないので、描き直すコマは新しく生成される。
+OpenAI のクレジットがある環境で、ネーム（`names/epNN.py`）を直してから実行する。
+コマの元絵はリポジトリに入れていない（第1話を除く）ので、その話のコマは全部（約13枚）描き直しになる。
+「前回」など他の話のコマを使い回している枠は、元の話も描き直さないと灰色になる。
 
 ```bash
 cd series/hommono
 python3 restore.py
-python3 gen_many.py 47          # 足りないコマだけ生成
+python3 gen_many.py 47          # その話のコマを生成
 python3 engine.py 47 --compose  # ページを組み直す
 ```
 
