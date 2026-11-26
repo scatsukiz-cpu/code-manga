@@ -19,7 +19,7 @@ EP = {"n": 47, "hook": "締め切り前夜、妹は私の作品を切り裂い�
  {"rows": [(1, 2), (1.4, 1)], "panels": [
   {"p": "An alarm clock showing 1 o'clock at night beside an embroidery frame.", "a": "tl", "b": [{"t": "午前一時", "k": "box"}]},
   {"p": "Yui's bandaged fingertips working the needle, a clock showing 4 o'clock.", "c": ["yui"], "a": "tl", "b": [{"t": "午前四時", "k": "box"}]},
-  {"p": "Large panel: dawn light through the small window; exhausted Yui holding up the finished embroidery, the slash transformed into a beautiful snow-covered branch running across the camellias.", "c": ["yui"], "a": "tl",
+  {"p": "Large panel: dawn light through a small window; exhausted Yui holding up with both hands a large square silk embroidery panel on a wooden frame (not a pouch), showing red camellias in snow with a snow-covered branch running diagonally across them where the cut had been. The embroidery fills the foreground.", "c": ["yui"], "a": "tl",
    "b": [{"t": "切り裂かれた\n傷は――", "k": "black"}, {"t": "雪をかぶった、\n枝になった", "k": "black"}]},
  ]},
 ]}

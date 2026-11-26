@@ -19,6 +19,6 @@ EP = {"n": 55, "hook": "あの日私を叩いた兄が、土下座した。", "p
  {"rows": [(1, 1), (1.5, 1)], "panels": [
   {"p": "Yui's calm face.", "c": ["yui"], "a": "tl", "b": [{"t": "あの日、私も――\nあなたに、\n土下座しろと\n言われました", "who": "r"}]},
   {"p": "Large panel: Yui walking past the kneeling elder brother without stopping.", "c": ["yui", "souma"], "a": "tr",
-   "b": [{"t": "顔を上げてください", "who": "l"}, {"t": "……でも、\n許すとは\n言っていません"}, {"t": "兄の背中は――\nずっと小さく\n見えた", "k": "black"}]},
+   "b": [{"t": "顔を上げて\nください", "who": "l"}, {"t": "……でも、\n許すとは\n言っていません"}, {"t": "兄の背中は――\nずっと小さく\n見えた", "k": "black"}]},
  ]},
 ]}

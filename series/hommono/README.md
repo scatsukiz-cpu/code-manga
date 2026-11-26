@@ -4,9 +4,8 @@ X 投稿用の縦4ページ×60話の漫画。白黒・縦書き・右から左�
 OpenAI の画像生成（gpt-image-2）でコマを描き、`engine.py` でページに組んで吹き出しを入れる。
 
 ## 制作状況
-- 完成（32話）：第1〜19話、第26〜34話、第38〜41話 → `pages/epNN/page1〜4.jpg` と `post.txt`（投稿文）
-- 未完成（28話）：第20〜25話、第35〜37話、第42〜60話。ネームは全話完成。コマの絵が足りない（約300枚）
-- 止まった理由：OpenAI API のクレジット切れ
+- 全60話完成 → `pages/epNN/page1〜4.jpg` と `post.txt`（投稿文）
+- 第13・53話の各1コマは、OpenAI に暴力表現として拒否されたため、描写を弱めて描き直した
 
 ## ファイル
 - `PLOT_真假千金.md`：プロット、登場人物、引っ張りの技
@@ -18,21 +17,18 @@ OpenAI の画像生成（gpt-image-2）でコマを描き、`engine.py` でペ�
 - `gen_many.py`：複数話のコマをまとめて並列生成（足りないコマだけ作る）
 - `finisher.py`：コマがそろった話から順にページを組む
 - `assets/chars/`：設定画13枚（JPEG で保存）
-- `assets/panels/`：未完成の話に必要なコマ（生成済みの分と、使い回し元）
+- `assets/panels/ep01/`：第1話のコマ（縦動画の素材）
 
-## 続きを作る手順
-OpenAI のクレジットを足して、環境変数 `OPENAI_API_KEY` が入った環境で実行する。
+## 描き直すとき
+OpenAI のクレジットがある環境で、ネーム（`names/epNN.py`）を直し、該当話のコマを消してから実行する。
+コマの元絵はリポジトリに入れていないので、描き直すコマは新しく生成される。
 
 ```bash
 cd series/hommono
 python3 restore.py
-W=8 python3 gen_many.py 20 21 22 23 24 25 35 36 37 $(seq 42 60)
-python3 finisher.py
+python3 gen_many.py 47          # 足りないコマだけ生成
+python3 engine.py 47 --compose  # ページを組み直す
 ```
-
-`restore.py` は JPEG から作業用の PNG（`chars/`、`panels/`、`out/`）を作り直す。
-`gen_many.py` は、すでにあるコマを飛ばして足りない分だけ生成する。
-`finisher.py` は、コマがそろった話から `out/epNN/` にページを書き出す。
 
 ## 縦動画（モーションコミック）
 `video/motion.py` は、第1話のコマから縦動画（1080×1920、約47秒）を作る。

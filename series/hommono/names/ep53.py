@@ -14,7 +14,7 @@ EP = {"n": 53, "hook": "「雪椿だって、燃やしてやったわ！」―�
  {"rows": [(1, 2), (1, 1), (1, 1)], "panels": [
   {"p": "Reika laughing hysterically, hair disheveled.", "c": ["reika"], "a": "tl", "b": [{"t": "だって……\nあの女が\n来なければ！", "k": "shout", "who": "r"}]},
   {"p": "Reika screaming with tears.", "c": ["reika"], "a": "tl", "b": [{"t": "全部\n私のものだった\nのに！", "who": "r"}, {"t": "本物なんて、\nいらなかった\nのに！"}]},
-  {"p": "Guests recoiling in horror.", "a": "tl", "b": []},
+  {"p": "Elegantly dressed party guests stepping back with shocked, uneasy expressions, whispering to each other.", "a": "tl", "b": []},
   {"p": "Reika's crazed smile.", "c": ["reika"], "a": "tl", "b": [{"t": "雪椿だって、\n燃やして\nやったわ！", "who": "r"}]},
  ]},
  {"rows": [(1, 1), (1.5, 1)], "strong": True, "panels": [
